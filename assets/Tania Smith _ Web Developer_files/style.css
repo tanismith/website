@@ -38,9 +38,6 @@
 .container {
   width: 100%;
 }
-a {
-  text-decoration: none;
-}
 header {
   height: 80px;
   padding: 15px 25px;
@@ -66,9 +63,11 @@ nav ul a {
   position: relative;
   z-index: 99;
   justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
   font-family: var(--texts-font);
   color: var(--color-text);
-  font-size: 16px;
+  font-size: 14px;
   transition: all 0.4;
   margin: 0 1rem;
 }
@@ -107,66 +106,19 @@ footer p {
 }
 .svg-inline--fa {
   font-size: 1.5rem;
-  padding: 10px;
+  padding-right: 15px;
 }
-footer a,
-.nav-before-after a {
+footer a {
   color: var(--color-text);
 }
-footer a:hover,
-.nav-before-after a:hover {
+footer a:hover {
   color: var(--color-title);
-}
-button {
-  background-color: var(--color-title);
-  border-radius: 10px;
-  border: none;
-  padding: 0.3rem 1.5rem;
-}
-button a {
-  color: white;
-  font-family: var(--texts-font);
-}
-.madeBy {
-  position: fixed;
-  transform: rotate(-90deg);
-  bottom: 125px;
-  left: -35px;
-  text-align: left;
-}
-.madeBy p {
-  color: var(--color-text);
-  font-family: var(--texts-font);
-  font-weight: 200;
-  font-size: 11px;
-}
-.divider {
-  background-color: var(--color-placeholder);
-  width: 65%;
-  margin: 30px auto;
 }
 main {
   background-color: #f2fafa;
   padding: 5rem 0;
 }
-h3 {
-  font-family: var(--title-font);
-  color: var(--color-title);
-  font-size: var(--subtitle-font-size);
-  font-weight: 200;
-  margin: 2rem 0;
-}
-h4 {
-  font-family: var(--texts-font);
-  color: var(--color-text);
-  font-size: 14px;
-  font-weight: 200;
-  margin: 0.7rem 0;
-}
-.about,
-.project-description,
-.project-highlights,
-.nav-before-after {
+.about {
   width: 80%;
   margin: 0 auto;
   padding: 80px 0;
@@ -211,8 +163,7 @@ hr {
   box-shadow: 1px 1px 20px 1px var(--color-shadow);
   border-radius: 20px;
 }
-.projectsContainer h2,
-.project-highlights h2 {
+.projectsContainer h2 {
   color: var(--color-title);
   font-size: var(--subtitle-font-size);
   font-family: var(--title-font);
@@ -223,9 +174,7 @@ hr {
   align-self: center;
   font-weight: 200;
 }
-.projectsContainer img,
-.project-description img,
-.project-view img {
+.projectsContainer img {
   border-radius: 5px;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
   /* transition: all 0.8s ease; */
@@ -260,53 +209,16 @@ hr {
   font-size: 12px;
   color: var(--color-text);
 }
-
-.project-description,
-.project-highlights,
-.project-view {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+.madeBy {
+  position: fixed;
+  transform: rotate(-90deg);
+  bottom: 125px;
+  left: -35px;
+  text-align: left;
 }
-.project-description div,
-.project-view div {
-  width: 50%;
-  margin-right: 4em;
-}
-.project-description h1 {
-  font-family: var(--title-font);
-  font-size: var(--title-font-size);
-  font-weight: 200;
-  line-height: 4rem;
-  color: var(--color-title);
-}
-.project-description p,
-.project-view p {
-  font-family: var(--texts-font);
-  font-size: var(--text-font-size);
+.madeBy p {
   color: var(--color-text);
-  margin: 2em 0;
-  text-align: justify;
-}
-.project-view {
-  padding: 02rem;
-}
-.project-highlights div {
-  text-align: -webkit-center;
-}
-.nav-before-after {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-}
-.before a,
-.after a {
-  display: flex;
-  align-items: center;
   font-family: var(--texts-font);
-  font-size: 1.5rem;
-}
-.nav-before-after .svg-inline--fa {
-  color: var(--color-title);
+  font-weight: 200;
+  font-size: 11px;
 }
