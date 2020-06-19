@@ -46,7 +46,8 @@ header nav ul li {
   list-style: none;
   padding-right: 10px;
 }
-nav ul a {
+nav ul a,
+.post-container a {
   position: relative;
   z-index: 99;
   justify-content: center;
@@ -56,17 +57,32 @@ nav ul a {
   transition: all 0.4;
   margin: 0 1rem;
 }
-nav ul a:hover:before {
+.post-container a {
+  color: var(--color-title);
+  margin: 0;
+}
+nav ul a:hover:before,
+.post-container a:hover:before {
   width: 100%;
   transition: all 0.4s;
   opacity: 1;
 }
-nav ul a:before {
+nav ul a:before,
+.post-container a:before {
   position: absolute;
   content: "";
   width: 0;
   bottom: -5px;
   border-bottom: 2px solid #53b6b0;
+  opacity: 0;
+}
+.post-container a:before {
+  position: absolute;
+  content: "";
+  width: 0;
+  bottom: -5px;
+  border-bottom: 2px solid #53b6b0;
+  color: var(--color-title);
   opacity: 0;
 }
 .message-icon {
@@ -76,27 +92,27 @@ nav ul a:before {
 }
 footer {
   display: flex;
+  display: row;
   justify-content: space-between;
   align-items: center;
   padding: 10px 50px 5px;
-
-  /* border-radius: 30px 30px 0 0; */
   background-color: #f2fafa;
   box-shadow: 1px 1px 20px 1px var(--color-shadow);
 }
-footer p, .lateralBar h3 {
+footer p,
+.lateralBar h3 {
   color: var(--color-title);
   font-family: var(--title-font);
   font-size: 1.2rem;
   margin-bottom: -15px;
 }
-.lateralBar h3{
+.lateralBar h3 {
   color: var(--color-text);
   margin: 0;
   border-bottom: 1px solid var(--color-title);
   width: 20rem;
 }
-.lateralBar p{
+.lateralBar p {
   color: var(--color-text);
   font-family: var(--texts-font);
 }
@@ -128,9 +144,10 @@ button a {
   border: 2px solid #00aaa1;
   border-radius: 10px;
   padding: 0.3rem 1.5rem;
+  transition: 0.2s;
 }
 .button-post a {
-  color: var(--color-text)
+  color: var(--color-text);
   font-family: var(--texts-font);
 }
 .madeBy {
@@ -192,13 +209,14 @@ figure {
   color: var(--color-title);
   display: inline;
 }
-.about p, .post-container h2{
+.about p,
+.post-container h2 {
   color: var(--color-title);
   font-size: var(--subtitle-font-size);
   font-family: var(--title-font);
   margin-top: 20px;
 }
-.post-container h2{
+.post-container h2 {
   font-weight: 600;
 }
 hr {
@@ -208,7 +226,8 @@ hr {
   border-width: 0;
   margin: 20px 0;
 }
-.about h2, .title-page-container h2 {
+.about h2,
+.title-page-container h2 {
   font-family: var(--texts-font);
   font-weight: 200;
   font-size: var(--text-font-size);
@@ -238,7 +257,9 @@ hr {
 }
 .projectsContainer img,
 .project-description img,
-.project-view img {
+.project-view img,
+.lateralBar img,
+article img {
   border-radius: 5px;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
   /* transition: all 0.8s ease; */
@@ -247,7 +268,8 @@ hr {
   transform: rotateY(-180deg);
   transition: all 0.8;
 } */
-.css-image:hover {
+.css-image:hover,
+.lateralBar img:hover {
   transform: rotateY(-180deg);
 }
 .projectsFlex {
@@ -272,7 +294,7 @@ article h3 {
   font-weight: 400;
   text-align: left;
 }
-.post-container h3{
+.post-container h3 {
   font-size: 14px;
   margin: 20px 0px 5px;
   font-family: var(--texts-font);
@@ -280,13 +302,14 @@ article h3 {
   line-height: 0px;
 }
 .gallery-element p,
-small, .lateralBar input {
+small,
+.lateralBar input {
   font-family: var(--texts-font);
   font-size: 12px;
   color: var(--color-text);
   text-align: left !important;
 }
-.lateralBar input{
+.lateralBar input {
   width: 100%;
   height: 50px;
   border-radius: 10px;
@@ -316,7 +339,7 @@ small, .lateralBar input {
 }
 .gallery-blogs-container {
   width: 80%;
-  margin:0 auto 5rem;
+  margin: 0 auto 5rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
@@ -327,6 +350,14 @@ small, .lateralBar input {
   margin: 0 auto;
   line-height: 0.3rem;
   margin-top: 3rem;
+  transition: 0.4s;
+}
+.gallery-element {
+  transition: 0.4s;
+}
+.post-container:hover,
+.gallery-element:hover {
+  transform: translateY(-15px);
 }
 .post-container img {
   width: 100%;
@@ -339,7 +370,8 @@ small, .lateralBar input {
   margin-right: 4em;
 }
 .project-description h1,
-article h1, .title-page-container h1{
+article h1,
+.title-page-container h1 {
   font-family: var(--title-font);
   font-size: var(--title-font-size);
   font-weight: 200;
@@ -368,26 +400,34 @@ article li {
   padding: 10px;
 }
 .before a,
-.after a {
+.after a,
+.lateralBar button {
   display: flex;
   align-items: center;
   font-family: var(--texts-font);
-  font-size: 1.5rem;
+  font-size: 1rem;
   transition: 0.2s;
 }
 .before a:hover,
-.after a:hover {
-  transform: scale(1.3);
+.after a:hover,
+.lateralBar button:hover {
+  transform: scale(1.1);
 }
 .nav-before-after .svg-inline--fa {
   color: var(--color-title);
+}
+.svg-inline--fa {
+  transition: 0.4s;
+}
+.svg-inline--fa:hover {
+  transform: scale(1.3);
 }
 article h2 {
   font-family: var(--texts-font);
   font-size: var(--subtitle-font-size);
   color: rgba(33, 32, 32, 0.85);
 }
-.post-container p{
+.post-container p {
   font-size: 15px;
   font-family: var(--texts-font);
   line-height: 1.5rem;
@@ -395,15 +435,11 @@ article h2 {
   text-align: justify;
   color: var(--color-text);
 }
-.lateralBar{
-  /* background: rgba(255, 255, 255, 0.9); */
+.lateralBar {
   background: #37a6d629;
-  width: 100%;
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-items: center;
   padding: 4rem 0;
 }
 .lateralBar h2 {
