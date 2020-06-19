@@ -324,7 +324,13 @@ article li {
   align-items: center;
   font-family: var(--texts-font);
   font-size: 1.5rem;
+  transition: 0.2s;
 }
+.before a:hover,
+.after a:hover {
+  transform: scale(1.3);
+}
+
 .nav-before-after .svg-inline--fa {
   color: var(--color-title);
 }
