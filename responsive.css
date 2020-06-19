@@ -60,10 +60,9 @@
   .lateralBar h3 {
     width: 23rem;
   }
-  /* /* footer {
+  footer {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    background-color: yellow;
-  }*/
+  }
 }

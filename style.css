@@ -401,7 +401,8 @@ article li {
 }
 .before a,
 .after a,
-.lateralBar button {
+.lateralBar button,
+.project-description button {
   display: flex;
   align-items: center;
   font-family: var(--texts-font);
@@ -410,7 +411,8 @@ article li {
 }
 .before a:hover,
 .after a:hover,
-.lateralBar button:hover {
+.lateralBar button:hover,
+.project-description button:hover {
   transform: scale(1.1);
 }
 .nav-before-after .svg-inline--fa {
