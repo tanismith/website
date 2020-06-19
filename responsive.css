@@ -32,4 +32,16 @@
   .article-intro {
     width: 80%;
   }
+  .gallery-blogs-container {
+    width: 95%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+  .post-container {
+    width: 90%;
+  }
+  .post-container h2 {
+    text-align: center;
+  }
 }

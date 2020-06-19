@@ -10,6 +10,7 @@
   --color-subtitle: #37a5d6;
   --color-placeholder: #acb9c4;
   --color-shadow: #00000012;
+  --color-background: #37a6d629;
 }
 * {
   margin: 0;
@@ -18,6 +19,8 @@
 }
 .container {
   width: 100%;
+  background-color: #f2fafa;
+  padding: 8rem 0;
 }
 a {
   text-decoration: none;
@@ -76,15 +79,26 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: 10px 50px 5px;
+
   /* border-radius: 30px 30px 0 0; */
   background-color: #f2fafa;
   box-shadow: 1px 1px 20px 1px var(--color-shadow);
 }
-footer p {
+footer p, .lateralBar h3 {
   color: var(--color-title);
   font-family: var(--title-font);
   font-size: 1.2rem;
   margin-bottom: -15px;
+}
+.lateralBar h3{
+  color: var(--color-text);
+  margin: 0;
+  border-bottom: 1px solid var(--color-title);
+  width: 20rem;
+}
+.lateralBar p{
+  color: var(--color-text);
+  font-family: var(--texts-font);
 }
 .svg-inline--fa {
   font-size: 1.5rem;
@@ -103,9 +117,20 @@ button {
   border-radius: 10px;
   border: none;
   padding: 0.3rem 1.5rem;
+  color: white;
 }
 button a {
   color: white;
+  font-family: var(--texts-font);
+}
+.button-post {
+  background: rgba(255, 255, 255, 0.708);
+  border: 2px solid #00aaa1;
+  border-radius: 10px;
+  padding: 0.3rem 1.5rem;
+}
+.button-post a {
+  color: var(--color-text)
   font-family: var(--texts-font);
 }
 .madeBy {
@@ -126,10 +151,7 @@ button a {
   width: 65%;
   margin: 30px auto;
 }
-main {
-  background-color: #f2fafa;
-  padding: 5rem 0;
-}
+
 h3 {
   font-family: var(--title-font);
   color: var(--color-title);
@@ -170,11 +192,14 @@ figure {
   color: var(--color-title);
   display: inline;
 }
-.about p {
+.about p, .post-container h2{
   color: var(--color-title);
   font-size: var(--subtitle-font-size);
   font-family: var(--title-font);
   margin-top: 20px;
+}
+.post-container h2{
+  font-weight: 600;
 }
 hr {
   width: 6rem;
@@ -183,7 +208,7 @@ hr {
   border-width: 0;
   margin: 20px 0;
 }
-.about h2 {
+.about h2, .title-page-container h2 {
   font-family: var(--texts-font);
   font-weight: 200;
   font-size: var(--text-font-size);
@@ -244,26 +269,69 @@ article h3 {
   font-size: var(--text-font-size);
   color: var(--color-subtitle);
   margin: 0;
-  font-weight: 500;
+  font-weight: 400;
   text-align: left;
 }
+.post-container h3{
+  font-size: 14px;
+  margin: 20px 0px 5px;
+  font-family: var(--texts-font);
+  color: var(--color-subtitle);
+  line-height: 0px;
+}
 .gallery-element p,
-small {
+small, .lateralBar input {
   font-family: var(--texts-font);
   font-size: 12px;
   color: var(--color-text);
-
   text-align: left !important;
+}
+.lateralBar input{
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  padding: 0 20px;
+  margin: 1rem 0;
+  outline: none;
 }
 
 .project-description,
 .project-highlights,
 .project-view,
-.article-intro {
+.article-intro,
+.title-page-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+}
+.title-page-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: left;
+  width: 75%;
+  margin: 3rem auto 0;
+}
+.gallery-blogs-container {
+  width: 80%;
+  margin:0 auto 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  justify-content: space-between;
+}
+.post-container {
+  width: 85%;
+  margin: 0 auto;
+  line-height: 0.3rem;
+  margin-top: 3rem;
+}
+.post-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
 }
 .project-description div,
 .project-view div {
@@ -271,7 +339,7 @@ small {
   margin-right: 4em;
 }
 .project-description h1,
-article h1 {
+article h1, .title-page-container h1{
   font-family: var(--title-font);
   font-size: var(--title-font-size);
   font-weight: 200;
@@ -311,7 +379,6 @@ article li {
 .after a:hover {
   transform: scale(1.3);
 }
-
 .nav-before-after .svg-inline--fa {
   color: var(--color-title);
 }
@@ -319,4 +386,34 @@ article h2 {
   font-family: var(--texts-font);
   font-size: var(--subtitle-font-size);
   color: rgba(33, 32, 32, 0.85);
+}
+.post-container p{
+  font-size: 15px;
+  font-family: var(--texts-font);
+  line-height: 1.5rem;
+  margin: 1rem 0;
+  text-align: justify;
+  color: var(--color-text);
+}
+.lateralBar{
+  /* background: rgba(255, 255, 255, 0.9); */
+  background: #37a6d629;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 4rem 0;
+}
+.lateralBar h2 {
+  color: var(--color-title);
+  font-size: var(--subtitle-font-size);
+  font-family: var(--title-font);
+  border-bottom: 2px solid var(--color-title);
+  border-top: 2px solid var(--color-title);
+  width: fit-content;
+  padding: 5px 10px;
+  margin-bottom: 2rem;
+  font-weight: 200;
 }
