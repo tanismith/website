@@ -16,25 +16,6 @@
   padding: 0;
   line-height: 2.3rem;
 }
-.cls-1 {
-  clip-path: url(#clip-logo);
-}
-.cls-2 {
-  fill: #14b7ae;
-}
-.cls-3,
-.cls-5 {
-  fill: #f2fafa;
-}
-.cls-3,
-.cls-4 {
-  font-size: 100px;
-  font-family: SourceSansPro-Semibold, Source Sans Pro;
-  font-weight: 600;
-}
-.cls-4 {
-  fill: #00aaa1;
-}
 .container {
   width: 100%;
 }
