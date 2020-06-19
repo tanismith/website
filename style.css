@@ -183,8 +183,7 @@ figure {
   font-family: var(--texts-font);
   color: var(--color-title);
 }
-.about h1,
-article h1 {
+.about h1 {
   font-family: var(--title-font);
   font-size: var(--title-font-size);
   color: var(--color-title);
@@ -290,7 +289,8 @@ small {
   width: 50%;
   margin-right: 4em;
 }
-.project-description h1 {
+.project-description h1,
+article h1 {
   font-family: var(--title-font);
   font-size: var(--title-font-size);
   font-weight: 200;

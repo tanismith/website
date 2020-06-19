@@ -23,8 +23,13 @@
   }
   article h1 {
     text-align: center;
+    margin-top: 5rem;
+    font-size: 3rem;
   }
   article {
     text-align: left;
+  }
+  .article-intro {
+    width: 80%;
   }
 }
