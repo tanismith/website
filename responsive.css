@@ -1,0 +1,30 @@
+@media screen and (max-width: 800px) {
+  .about,
+  .project-description,
+  .project-highlights,
+  .nav-before-after,
+  .article-intro {
+    padding: 0;
+  }
+  .project-description div,
+  .project-view div {
+    width: 100%;
+    margin-right: 0;
+    text-align: center;
+  }
+  .project-description h1 {
+    font-size: 3rem;
+  }
+  .button {
+    margin-bottom: 2rem;
+  }
+  hr {
+    margin: 20px auto;
+  }
+  article h1 {
+    text-align: center;
+  }
+  article {
+    text-align: left;
+  }
+}

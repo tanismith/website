@@ -1,7 +1,7 @@
 :root {
   --title-font-size: 60px;
   --subtitle-font-size: 30px;
-  --text-font-size: 20px #666666;
+  --text-font-size: 20px;
   --line-height-text: 1rem;
   --title-font: "Source Sans Pro", sans-serif;
   --texts-font: "Poppins", sans-serif;
@@ -14,7 +14,7 @@
 * {
   margin: 0;
   padding: 0;
-  line-height: 2rem;
+  line-height: 2.3rem;
 }
 .cls-1 {
   clip-path: url(#clip-logo);
@@ -166,17 +166,25 @@ h4 {
 .about,
 .project-description,
 .project-highlights,
-.nav-before-after {
+.nav-before-after,
+.article-intro {
   width: 80%;
   margin: 0 auto;
   padding: 80px 0;
+}
+.article-intro {
+  width: 60%;
+}
+figure {
+  text-align: center;
 }
 .about span {
   font-size: var(--title-font-size);
   font-family: var(--texts-font);
   color: var(--color-title);
 }
-.about h1 {
+.about h1,
+article h1 {
   font-family: var(--title-font);
   font-size: var(--title-font-size);
   color: var(--color-title);
@@ -230,10 +238,10 @@ hr {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
   /* transition: all 0.8s ease; */
 }
-.projectsContainer img:hover {
-  /* transform: rotateY(-180deg);
-  transition: all 0.8; */
-}
+/* .projectsContainer img:hover {
+  transform: rotateY(-180deg);
+  transition: all 0.8;
+} */
 .css-image:hover {
   transform: rotateY(-180deg);
 }
@@ -245,25 +253,33 @@ hr {
   padding-top: 3rem;
 }
 .projectsFlex .gallery-element {
-  margin: 30px 10px;
+  margin: 30px 20px;
 }
 .gallery-element a {
   text-decoration: none;
 }
-.gallery-element h3 {
+.gallery-element h3,
+article h3 {
   font-family: var(--texts-font);
-  font-size: var(--texts-font);
+  font-size: var(--text-font-size);
   color: var(--color-subtitle);
+  margin: 0;
+  font-weight: 500;
+  text-align: left;
 }
-.gallery-element p {
+.gallery-element p,
+small {
   font-family: var(--texts-font);
   font-size: 12px;
   color: var(--color-text);
+
+  text-align: left !important;
 }
 
 .project-description,
 .project-highlights,
-.project-view {
+.project-view,
+.article-intro {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -282,7 +298,9 @@ hr {
   color: var(--color-title);
 }
 .project-description p,
-.project-view p {
+.project-view p,
+.article-intro p,
+article li {
   font-family: var(--texts-font);
   font-size: var(--text-font-size);
   color: var(--color-text);
@@ -309,4 +327,9 @@ hr {
 }
 .nav-before-after .svg-inline--fa {
   color: var(--color-title);
+}
+article h2 {
+  font-family: var(--texts-font);
+  font-size: var(--subtitle-font-size);
+  color: rgba(33, 32, 32, 0.85);
 }
