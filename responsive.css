@@ -18,9 +18,9 @@
   .button {
     margin-bottom: 2rem;
   }
-  hr {
+  /* hr {
     margin: 20px auto;
-  }
+  } */
   article h1 {
     text-align: center;
     margin-top: 5rem;
@@ -64,5 +64,19 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+  }
+  .aboutDescription {
+    flex-wrap: wrap;
+  }
+  .aboutDescription img {
+    width: 400px;
+    margin: 2rem 0;
+  }
+  .container {
+    padding: 4em 0;
+  }
+  .projectsFlexDescription {
+    width: 100%;
+    margin: 0 1.5em;
   }
 }

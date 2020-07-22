@@ -19,8 +19,8 @@
 }
 .container {
   width: 100%;
-  background-color: #f2fafa;
-  padding: 8rem 0;
+  /* background-color: #f2fafa; */
+  padding: 1rem 0;
 }
 a {
   text-decoration: none;
@@ -29,7 +29,7 @@ header {
   height: 80px;
   padding: 15px 25px;
   /* border-radius: 0 0 50px 50px; */
-  background: #f2fafa;
+  /* background: #f2fafa; */
 }
 nav {
   height: inherit;
@@ -195,9 +195,6 @@ h4 {
 .article-intro {
   width: 60%;
 }
-figure {
-  text-align: center;
-}
 .about span {
   font-size: var(--title-font-size);
   font-family: var(--texts-font);
@@ -219,6 +216,9 @@ figure {
 .post-container h2 {
   font-weight: 600;
 }
+.post-container hr {
+  margin: 0;
+}
 hr {
   width: 6rem;
   background-color: var(--color-title);
@@ -239,9 +239,8 @@ hr {
   justify-content: center;
   width: 90%;
   margin: 0 auto;
-  padding: 5rem 0 2rem;
-  box-shadow: 1px 1px 20px 1px var(--color-shadow);
-  border-radius: 20px;
+  /* box-shadow: 1px 1px 20px 1px var(--color-shadow);
+  border-radius: 20px; */
 }
 .projectsContainer h2,
 .project-highlights h2 {
@@ -255,13 +254,16 @@ hr {
   align-self: center;
   font-weight: 200;
 }
+.projectsContainer h2 {
+  margin: 2.5rem 0;
+}
 .projectsContainer img,
 .project-description img,
 .project-view img,
 .lateralBar img,
 article img {
   border-radius: 5px;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  /* box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15); */
   /* transition: all 0.8s ease; */
 }
 /* .projectsContainer img:hover {
@@ -272,9 +274,17 @@ article img {
 .lateralBar img:hover {
   transform: rotateY(-180deg);
 }
-.projectsFlex {
+.aboutDescription {
   display: flex;
   flex-direction: row;
+  margin: 5em auto;
+}
+.aboutDescription img {
+  margin: 0 2em;
+}
+.projectsFlex {
+  display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   padding-top: 3rem;
@@ -325,20 +335,14 @@ small,
 .article-intro,
 .title-page-container {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.title-page-container {
-  display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: left;
-  width: 75%;
+  width: 85%;
   margin: 3rem auto 0;
 }
 .gallery-blogs-container {
-  width: 80%;
+  width: 90%;
   margin: 0 auto 5rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -354,6 +358,20 @@ small,
 }
 .gallery-element {
   transition: 0.4s;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.projectsFlexDescription {
+  margin: 2rem;
+  width: 30%;
+}
+.projectsFlexDescription article {
+  line-height: 1.5;
+  text-align: justify;
+  font-family: var(--texts-font);
+  font-size: small;
 }
 .post-container:hover,
 .gallery-element:hover {
@@ -361,7 +379,7 @@ small,
 }
 .post-container img {
   width: 100%;
-  height: auto;
+  height: 200px;
   border-radius: 15px;
 }
 .project-description div,
