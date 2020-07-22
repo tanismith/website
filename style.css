@@ -6,7 +6,7 @@
   --title-font: "Source Sans Pro", sans-serif;
   --texts-font: "Poppins", sans-serif;
   --color-title: #00aaa1;
-  --color-text: #666666;
+  --color-text: #545454;
   --color-subtitle: #37a5d6;
   --color-placeholder: #acb9c4;
   --color-shadow: #00000012;
@@ -47,7 +47,8 @@ header nav ul li {
   padding-right: 10px;
 }
 nav ul a,
-.post-container a {
+.post-container a,
+.projectsFlexDescription a {
   position: relative;
   z-index: 99;
   justify-content: center;
@@ -57,18 +58,21 @@ nav ul a,
   transition: all 0.4;
   margin: 0 1rem;
 }
-.post-container a {
+.post-container a,
+.projectsFlexDescription a {
   color: var(--color-title);
   margin: 0;
 }
 nav ul a:hover:before,
-.post-container a:hover:before {
+.post-container a:hover:before,
+.projectsFlexDescription a:hover:before {
   width: 100%;
   transition: all 0.4s;
   opacity: 1;
 }
 nav ul a:before,
-.post-container a:before {
+.post-container a:before,
+.projectsFlexDescription a:before {
   position: absolute;
   content: "";
   width: 0;
@@ -76,7 +80,7 @@ nav ul a:before,
   border-bottom: 2px solid #53b6b0;
   opacity: 0;
 }
-.post-container a:before {
+.post-container a:before .projectsFlexDescription a:before {
   position: absolute;
   content: "";
   width: 0;
@@ -183,14 +187,15 @@ h4 {
   font-weight: 200;
   margin: 0.7rem 0;
 }
-.about,
-.project-description,
-.project-highlights,
 .nav-before-after,
 .article-intro {
   width: 80%;
   margin: 0 auto;
   padding: 80px 0;
+}
+.about {
+  width: 85%;
+  margin: 4em auto 0;
 }
 .article-intro {
   width: 60%;
@@ -242,8 +247,7 @@ hr {
   /* box-shadow: 1px 1px 20px 1px var(--color-shadow);
   border-radius: 20px; */
 }
-.projectsContainer h2,
-.project-highlights h2 {
+.projectsContainer h2 {
   color: var(--color-title);
   font-size: var(--subtitle-font-size);
   font-family: var(--title-font);
@@ -257,9 +261,15 @@ hr {
 .projectsContainer h2 {
   margin: 2.5rem 0;
 }
+.article-description {
+  display: flex;
+  flex-direction: row;
+  margin: 3em auto;
+  justify-content: center;
+  width: 85%;
+}
 .projectsContainer img,
-.project-description img,
-.project-view img,
+.article-description img,
 .lateralBar img,
 article img {
   border-radius: 5px;
@@ -277,7 +287,6 @@ article img {
 .aboutDescription {
   display: flex;
   flex-direction: row;
-  margin: 5em auto;
 }
 .aboutDescription img {
   margin: 0 2em;
@@ -290,15 +299,19 @@ article img {
   padding-top: 3rem;
 }
 .projectsFlex .gallery-element {
-  margin: 30px 20px;
+  margin: 4em 2em;
 }
 .gallery-element a {
   text-decoration: none;
 }
+.gallery-element img {
+  box-shadow: 1px 1px 10px 1px var(--color-shadow);
+}
+
 .gallery-element h3,
-article h3 {
+article-description h3 {
   font-family: var(--texts-font);
-  font-size: var(--text-font-size);
+  font-size: var(--subtitle-font-size);
   color: var(--color-subtitle);
   margin: 0;
   font-weight: 400;
@@ -315,9 +328,11 @@ article h3 {
 small,
 .lateralBar input {
   font-family: var(--texts-font);
-  font-size: 12px;
+  font-size: 15px;
   color: var(--color-text);
   text-align: left !important;
+  line-height: normal;
+  font-weight: 100;
 }
 .lateralBar input {
   width: 100%;
@@ -328,18 +343,16 @@ small,
   margin: 1rem 0;
   outline: none;
 }
-
-.project-description,
-.project-highlights,
-.project-view,
-.article-intro,
-.title-page-container {
+.article-intro {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: left;
+  width: 60%;
+}
+.title-page-container {
+  margin: 4em auto 0;
   width: 85%;
-  margin: 3rem auto 0;
 }
 .gallery-blogs-container {
   width: 90%;
@@ -359,7 +372,6 @@ small,
 .gallery-element {
   transition: 0.4s;
   justify-content: center;
-  text-align: center;
   display: flex;
   flex-wrap: wrap;
 }
@@ -370,8 +382,10 @@ small,
 .projectsFlexDescription article {
   line-height: 1.5;
   text-align: justify;
+  font-size: 16px;
   font-family: var(--texts-font);
-  font-size: small;
+  font-weight: 100;
+  margin: 1em 0;
 }
 .post-container:hover,
 .gallery-element:hover {
@@ -382,12 +396,11 @@ small,
   height: 200px;
   border-radius: 15px;
 }
-.project-description div,
-.project-view div {
+.article-description div {
   width: 50%;
   margin-right: 4em;
 }
-.project-description h1,
+.article-description h1,
 article h1,
 .title-page-container h1 {
   font-family: var(--title-font);
@@ -396,8 +409,7 @@ article h1,
   line-height: 4rem;
   color: var(--color-title);
 }
-.project-description p,
-.project-view p,
+.article-description p,
 .article-intro p,
 article li {
   font-family: var(--texts-font);
@@ -405,12 +417,6 @@ article li {
   color: var(--color-text);
   margin: 2em 0;
   text-align: justify;
-}
-.project-view {
-  padding: 02rem;
-}
-.project-highlights div {
-  text-align: -webkit-center;
 }
 .nav-before-after {
   display: flex;
@@ -420,7 +426,7 @@ article li {
 .before a,
 .after a,
 .lateralBar button,
-.project-description button {
+.article-description button {
   display: flex;
   align-items: center;
   font-family: var(--texts-font);
@@ -430,7 +436,7 @@ article li {
 .before a:hover,
 .after a:hover,
 .lateralBar button:hover,
-.project-description button:hover {
+.article-description button:hover {
   transform: scale(1.1);
 }
 .nav-before-after .svg-inline--fa {
