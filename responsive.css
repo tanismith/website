@@ -8,7 +8,7 @@
   .about span {
     font-size: 2.8em;
   }
-  .about h2{
+  .about h2 {
     margin-top: 0;
   }
   .button {
@@ -33,8 +33,8 @@
   .article-description div {
     width: 100%;
   }
-  .article-description img{
-    width:100%;
+  .article-description img {
+    width: 100%;
     height: auto;
   }
   .gallery-blogs-container {
@@ -49,12 +49,12 @@
   .post-container hr {
     margin: 0.3em 0;
   }
-  .lateralBar div{
+  .lateralBar div {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
   }
-  .barContainer{
+  .barContainer {
     width: inherit;
   }
   .lateralBar img {
@@ -91,30 +91,25 @@
   .article-description button {
     margin-bottom: 2em;
   }
-.article-description h3{
-  font-size: 14px;
-  margin: 0;
-}
-  header{
+  .article-description h3 {
+    font-size: 14px;
+    margin: 0;
+  }
+  /* Empiezan estilos del header */
+  header {
     position: fixed;
     background-color: white;
     width: 100%;
     height: 60px;
     z-index: 999;
   }
-  header .navbar{
-    width: 90%;
-    align-items: flex-start;
-  }
-  header nav ul {
-    display: none;
-  }
-  header #menuIcon,
-  .nav-active {
+  /* Aqui terminan estilos del header */
+  /* Estilos del nav */
+  header #menuIcon {
     display: block;
   }
   .nav-active {
-    background-color:rgba(255, 255, 255, 0.906);
+    background-color: rgba(255, 255, 255, 0.906);
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -122,17 +117,25 @@
     width: 60%;
     height: 100vh;
     justify-content: center;
-    right: -100vw;
+    right: 0;
+  }
+  header .navbar {
+    width: 90%;
+    align-items: flex-start;
+  }
+  header nav ul {
+    display: none;
   }
   .nav-active ul li {
     text-align: center;
     padding: 1.3em 0;
     list-style: none;
   }
-  nav{
+  nav {
     display: flex;
     flex-direction: row;
   }
-  nav svg{
+  nav svg {
     padding-left: 1em;
   }
+}
